@@ -94,6 +94,6 @@ SOFTWARE.
 ## Contact
 
 - **Priyam Deepak Choksi**: [choksi.pr@northeastern.edu](mailto:choksi.pr@northeastern.edu)
-- **Project Link**: [https://github.com/priyam-choksi/Diabetes-Streamlit-App](https://github.com/your_username/Diabetes-Prediction-App)
+- **Project Link**: [[https://github.com/priyam-choksi/Diabetes-Streamlit-App](https://github.com/priyam-choksi/Diabetes-Streamlit-App)]
 
 ---
