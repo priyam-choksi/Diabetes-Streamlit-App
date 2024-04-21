@@ -78,14 +78,6 @@ Contributions are welcome! Please feel free to fork the project, add your featur
 - GitHub repository for sample code and project structure: [Streamlit Cancer Prediction](https://github.com/alejandro-ao/streamlit-cancer-predict)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/priyam-choksi/Diabetes-Streamlit-App/blob/main/LICENSE) file for details.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/priyam-choksi/Diabetes-Streamlit-App/blob/main/LICENSE) file for details.
-
-
-
-## License
 MIT License
 
 Copyright (c) 2024 Priyam Deepak Choksi
