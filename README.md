@@ -1,7 +1,3 @@
-Given your clarification on using Logistic Regression instead of a Random Forest Classifier, let's update the `README.md` file to accurately reflect the model used in your Diabetes Prediction App. This detail is crucial for users and contributors to understand the machine learning backbone of the application. Below is the revised `README.md` content tailored to your updated model choice:
-
----
-
 # Diabetes Prediction App
 
 ## Project Overview
