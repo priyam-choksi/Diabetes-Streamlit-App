@@ -15,6 +15,13 @@ def project_description():
     st.title("Diabetes Prediction and Analysis Web Application")
     st.write("""
 ---
+Streamlit Application link : 
+
+1. [Diabetes Prediction and Analysis Web Application](https://diabetes-prediction-and-analytics.streamlit.app/) - Comprehensive web application with Tabs for EDA and Prediction.
+2. [Prediction Model](https://diabetes-pred-model.streamlit.app/) - Only Prediction Model
+3. [Exploratory Data Analysis (EDA)](https://diabetes-eda.streamlit.app/) - Only EDA and Visualizations
+
+---
 #### Project Overview
 This project aims to assess the likelihood of diabetes based on various health metrics provided by the user. The application leverages a Logistic Regression model, well-suited for binary classification tasks, to predict the onset of diabetes. It features a user-friendly web interface developed with Streamlit, enabling easy interaction and real-time prediction capabilities.
 
