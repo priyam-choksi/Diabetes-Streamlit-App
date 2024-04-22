@@ -65,7 +65,7 @@ The Logistic Regression model was trained with the following considerations:
 
 Execute the following command in the terminal:
 ```bash
-streamlit run appm.py
+streamlit run streamlit-app.py
 ```
 
 ## Contributing
