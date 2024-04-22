@@ -4,6 +4,10 @@
 2. [Prediction Model](https://diabetes-pred-model.streamlit.app/) - Only Prediction Model
 3. [Exploratory Data Analysis (EDA)](https://diabetes-eda.streamlit.app/) - Only EDA and Visualizations
 
+## Project Video 
+
+1. [Video](https://youtu.be/gIcCXWj7e-A) - A Video showcasing the project files and demo of the web application.
+
 ## Project Overview
 
 This project aims to assess the likelihood of diabetes based on various health metrics provided by the user. The application leverages a Logistic Regression model, well-suited for binary classification tasks, to predict the onset of diabetes. It features a user-friendly web interface developed with Streamlit, enabling easy interaction and real-time prediction capabilities.
