@@ -88,55 +88,56 @@ model, preprocessor = load_models()
 def diabetes_app():
     st.title('🩺 Diabetes Prediction Tool')
 
-    with st.container():
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            age = st.slider('Age', min_value=1, max_value=120, value=30, step=1)
-        with col2:
-            bmi = st.slider('BMI', min_value=10.0, max_value=50.0, value=22.0, step=0.1)
-        with col3:
-            glucose = st.slider('Glucose Level (mg/dL)', min_value=50, max_value=200, value=99, step=1)
+    # Create a two-column layout with a smaller column for the sidebar
+    sidebar_col, divider_col, content_col = st.columns([1.5 ,0.1, 4], gap="medium")
 
-        col4, col5 = st.columns(2)
-        with col4:
-            hbA1c = st.slider('HbA1c Level (%)', min_value=3.5, max_value=15.0, value=5.5, step=0.1)
-        with col5:
-            gender = st.radio('Gender', ['Female', 'Male'])
+    with sidebar_col:
+        # Sidebar with input sliders
+        st.subheader("User Input")
+        age = st.slider('Age', min_value=1, max_value=120, value=30, step=1)
+        bmi = st.slider('BMI', min_value=10.0, max_value=50.0, value=22.0, step=0.1)
+        glucose = st.slider('Glucose Level (mg/dL)', min_value=50, max_value=200, value=99, step=1)
+        hbA1c = st.slider('HbA1c Level (%)', min_value=3.5, max_value=15.0, value=5.5, step=0.1)
+        gender = st.radio('Gender', ['Female', 'Male'])
 
-    user_input_df = pd.DataFrame({
-        'year': [2022],
-        'age': [age],
-        'bmi': [bmi],
-        'hbA1c_level': [hbA1c],
-        'blood_glucose_level': [glucose],
-        'gender': [gender],
-        'location': ['Alabama'],
-        'smoking_history': ['former'],
-    })
+    with content_col:
+        # Main content area
+        user_input_df = pd.DataFrame({
+            'year': [2022],
+            'age': [age],
+            'bmi': [bmi],
+            'hbA1c_level': [hbA1c],
+            'blood_glucose_level': [glucose],
+            'gender': [gender],
+            'location': ['Alabama'],
+            'smoking_history': ['former'],
+        })
 
-    diabetes_probability = predict_diabetes(user_input_df)
-    type_2_diabetes_probability = diabetes_probability * 0.9
-    feedback = provide_feedback(bmi, glucose, hbA1c)
+        diabetes_probability = predict_diabetes(user_input_df)
+        type_2_diabetes_probability = diabetes_probability * 0.7
+        feedback = provide_feedback(bmi, glucose, hbA1c)
 
-    with st.container():
-        st.header('📊 Diabetes Prediction Results')
-        col1, col2 = st.columns([2, 3])
+        
 
-        with col1:
+        # Displaying the prediction results and health metrics in separate containers
+        with st.container():
             st.subheader('👤 Your Health Metrics:')
-            st.markdown(f"**Age:** {age}")
-            st.markdown(f"**BMI:** {bmi} - *{feedback['BMI']}*")
-            st.markdown(f"**Glucose Level:** {glucose} mg/dL - *{feedback['Glucose']}*")
-            st.markdown(f"**HbA1c Level:** {hbA1c}% - *{feedback['HbA1c']}*")
+            st.json({
+                "Age": age,
+                "BMI": f"{bmi} - {feedback['BMI']}",
+                "Glucose Level": f"{glucose} mg/dL - {feedback['Glucose']}",
+                "HbA1c Level": f"{hbA1c}% - {feedback['HbA1c']}"
+            })
 
-        with col2:
+        with st.container():
             st.subheader('🔍 Diabetes Assessment')
+            # Display each metric in its own row
             st.metric("Probability of Diabetes", f"{diabetes_probability*100:.2f}%")
             st.metric("Probability of Type 2 Diabetes", f"{type_2_diabetes_probability*100:.2f}%")
             status_color = "🔴" if diabetes_probability > 0.5 else "🟢"
             st.metric("Diagnosis", f"{status_color} {'Diabetic' if diabetes_probability > 0.5 else 'Not Diabetic'}")
-
-    st.header('📈 Visual Health Analysis')
+            
+    st.subheader('📈 Visual Health Analysis')
     plot_health_metrics(bmi, glucose, hbA1c)
 
 # Supporting functions used within the app
@@ -234,14 +235,22 @@ def perform_eda():
 
     filtered_data = apply_filters(data, selected_states, selected_year_range, selected_gender, selected_age_range, selected_hypertension, selected_heart_disease, selected_diabetes, selected_smoking_status)
 
+    
     st.header('Filtered Data:')
     st.dataframe(filtered_data, height=300)
+
+    st.markdown("---")
+
+    st.header('Data Visualization')
+
+    st.markdown("---")
+
+    st.header('Select Graphs')
+    viz_type = st.selectbox('Select Visualization Type:', ['Histogram', 'Line Chart', 'Bar Chart', 'Radar Chart', 'Scatter Plot', 'Pair Plot', 'Box Plot', 'Correlation Matrix'])
 
     with st.expander("Feature Selection"):
         selected_features = st.multiselect('Select Features to Plot:', numeric_features, default=numeric_features)
 
-    st.header('Visualizations')
-    viz_type = st.selectbox('Select Visualization Type:', ['Histogram', 'Line Chart', 'Bar Chart', 'Radar Chart', 'Scatter Plot', 'Pair Plot', 'Box Plot', 'Correlation Matrix'])
 
     if viz_type == 'Histogram':
         for feature in selected_features:
