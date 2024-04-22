@@ -33,9 +33,11 @@ This Diabetes Prediction App aims to assess the likelihood of diabetes based on 
 
 - **Model Used**: Logistic Regression, which is effective for binary classification problems.
 - **Performance**:
-  - **Accuracy**: Achieved on the test set.
+  - **Accuracy**: Achieved on the test set. 
   - **ROC AUC**: Measure of the model's ability to distinguish between the classes.
-
+  - **Accuracy**: 0.9597 
+  - **ROC AUC:** 0.9587
+    
 ### Model Training Details
 
 The Logistic Regression model was trained with the following considerations:
