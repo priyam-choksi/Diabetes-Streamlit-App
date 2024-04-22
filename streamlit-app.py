@@ -15,12 +15,6 @@ def project_description():
     st.title("Diabetes Prediction and Analysis Web Application")
     st.write("""
 ---
-Streamlit Application link : 
-
-1. [Diabetes Prediction and Analysis Web Application](https://diabetes-prediction-and-analytics.streamlit.app/) - Comprehensive web application with Tabs for EDA and Prediction.
-2. [Prediction Model](https://diabetes-pred-model.streamlit.app/) - Only Prediction Model
-3. [Exploratory Data Analysis (EDA)](https://diabetes-eda.streamlit.app/) - Only EDA and Visualizations
-
 Project Video : 
 1. [Project Video uploaded on YouTube](https://youtu.be/gIcCXWj7e-A)
 ---
@@ -80,6 +74,12 @@ This project is licensed under the MIT License
 
 #### Project Repository
 [GitHub Repository](https://github.com/priyam-choksi/Diabetes-Streamlit-App)
+
+####Streamlit Application link
+
+1. [Diabetes Prediction and Analysis Web Application](https://diabetes-prediction-and-analytics.streamlit.app/) - Comprehensive web application with Tabs for EDA and Prediction.
+2. [Prediction Model](https://diabetes-pred-model.streamlit.app/) - Only Prediction Model
+3. [Exploratory Data Analysis (EDA)](https://diabetes-eda.streamlit.app/) - Only EDA and Visualizations
       
     """)
 
