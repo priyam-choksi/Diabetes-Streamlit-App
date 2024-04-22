@@ -1,4 +1,8 @@
-# Diabetes Prediction App
+# Diabetes Prediction and Analysis
+
+1. [Diabetes Prediction and Analysis Web Application](https://diabetes-prediction-and-analytics.streamlit.app/)
+2. [Prediction Model](https://diabetes-pred-model.streamlit.app/)
+3. [Exploratory Data Analysis (EDA)](https://diabetes-eda.streamlit.app/)
 
 ## Project Overview
 
