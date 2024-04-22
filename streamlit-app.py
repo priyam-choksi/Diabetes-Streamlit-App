@@ -75,7 +75,7 @@ This project is licensed under the MIT License
 #### Project Repository
 [GitHub Repository](https://github.com/priyam-choksi/Diabetes-Streamlit-App)
 
-#### Streamlit Application link
+## Streamlit Application link
 
 1. [Diabetes Prediction and Analysis Web Application](https://diabetes-prediction-and-analytics.streamlit.app/) - Comprehensive web application with Tabs for EDA and Prediction.
 2. [Prediction Model](https://diabetes-pred-model.streamlit.app/) - Only Prediction Model
