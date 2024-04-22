@@ -16,8 +16,7 @@ def project_description():
     st.write("""
 ---
 #### Project Overview
-This Diabetes Prediction App aims to assess the likelihood of diabetes based on various health metrics provided by the user. The application leverages a Logistic Regression model, well-suited for binary classification tasks, to predict the onset of diabetes. It features a user-friendly web interface developed with Streamlit, enabling easy interaction and real-time prediction capabilities.
-The application is divided into three main components:
+This project aims to assess the likelihood of diabetes based on various health metrics provided by the user. The application leverages a Logistic Regression model, well-suited for binary classification tasks, to predict the onset of diabetes. It features a user-friendly web interface developed with Streamlit, enabling easy interaction and real-time prediction capabilities.
 
 - **Project Description**: Details the methodologies, data descriptions, and objectives of the project.
 - **Prediction Model**: Utilizes a machine learning model to predict diabetes based on input features.
@@ -51,8 +50,8 @@ The application is divided into three main components:
 #### Model Information
 - **Model Used**: Logistic Regression, which is effective for binary classification problems.
 - **Performance**:
-  - **Accuracy**: Achieved on the test set.
-  - **ROC AUC**: Measure of the model's ability to distinguish between the classes.
+  - **Accuracy**: 0.9597
+  - **ROC AUC**: 0.9587
 - **Model Training Details**:
   - **Max Iterations**: Set to 1000 to ensure convergence.
   - **Features Used**: Includes age, BMI, glucose levels, HbA1c levels, gender, and smoking history.
