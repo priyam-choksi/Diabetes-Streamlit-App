@@ -6,7 +6,7 @@
 
 ## Project Video 
 
-1. [Video](https://youtu.be/gIcCXWj7e-A) - A Video showcasing the project files and demo of the web application.
+1. [Diabetes Prediction and Analysis - Project Video](https://youtu.be/gIcCXWj7e-A) - A Video showcasing the project files and demo of the web application.
 
 ## Project Overview
 
