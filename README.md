@@ -77,10 +77,8 @@ streamlit run streamlit-app.py
 Contributions are welcome! Please feel free to fork the project, add your features, and submit a pull request.
 
 ## References
-- CDC Diabetes Surveillance System: [CDC Diabetes Atlas Surveillance](https://gis.cdc.gov/grasp/diabetes/diabetesatlas-surveillance.html)
 - Logistic regression concepts and implementation: [Introduction to Statistical Learning](https://www.statlearning.com/)
 - Exploratory data analysis techniques: [Hands-On Exploratory Data Analysis with Python](https://www.packtpub.com/product/hands-on-exploratory-data-analysis-with-python/9781800205549)
-- Model evaluation metrics: [Scikit-Learn Documentation](https://scikit-learn.org/stable/documentation.html)
 - Streamlit documentation for building web applications: [Streamlit Documentation](https://docs.streamlit.io/)
 - Matplotlib and Plotly documentation for data visualization: [Matplotlib Documentation](https://matplotlib.org/stable/contents.html), [Plotly Documentation](https://plotly.com/python/)
 - GitHub repository for sample code and project structure: [Streamlit Cancer Prediction](https://github.com/alejandro-ao/streamlit-cancer-predict)
